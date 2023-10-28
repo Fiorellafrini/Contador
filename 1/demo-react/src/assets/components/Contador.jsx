@@ -13,10 +13,19 @@ class Contador extends React.Component {
 
   click = () => {
     this.setState({counter: this.state.counter +1, saludo: "Ya sume!"}, ()=>{
-        console.log(this.state.counter); //hago la callback para que el consollog coincida con lo renderizado. poruqe si no el console muestra el valor anterior.
+        // console.log(this.state.counter);
+         //hago la callback para que el consollog coincida con lo renderizado. poruqe si no el console muestra el valor anterior.
 
     }) //con el setstate ejecuto el estado
   };
+
+  componentDidMount(){
+    console.log("me acabo de mostrar")
+  }
+
+  componentDidUpdate(){
+    console.log(`me actualice, ahora mi estado es : ${this.state.counter}`)
+  }
 
   render() {
     return (

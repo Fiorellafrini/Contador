@@ -1,14 +1,16 @@
-// import { useState } from 'react'
+
 import './App.css'
 import Contador from './assets/components/Contador'
+import ContadorFuncional from './assets/components/ContadorFuncional'
 
 function App() {
-  // const [count, setCount] = useState(0)
+
 
   return (
     <>
       <div>
    <Contador />
+   <ContadorFuncional />
       </div>
     </>
   )
