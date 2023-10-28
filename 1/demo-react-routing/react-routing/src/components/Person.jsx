@@ -1,8 +1,10 @@
-const Person = ({ id, name }) => {
+const Person = ( user ) => {
   return (
     <div>
-      <h3>Name: {name}</h3>
-      <h3>Id: {id}</h3>
+      <h3>Name: {user.name}</h3>
+      <h3>Id: {user.id}</h3>
+
+
     </div>
   );
 };

@@ -13,6 +13,13 @@ const Profile = () => {
       .catch(() => {
         console.log("se rompio");
       });
+
+    return () => {
+      setUsers([]);
+      console.log(users);
+
+      //   console.log("se desmonto");
+    };
   }, []);
 
   return (
@@ -20,12 +27,13 @@ const Profile = () => {
       <h1>Profile</h1>
       <p>mucha dataaa</p>
 
-      {users?.map((prop) => {
+      {users?.map((user) => {
         return (
           <Person
-            key={prop.id}
-            id={prop.id}
-            name={prop.name}
+            key={user.id}
+            id={user.id}
+            name={user.name}
+            city={user.address.city}
           />
         );
       })}
