@@ -14,7 +14,7 @@ const ContadorFuncional = () => {
   useEffect(() => {
     console.log("se monto el componente funcional"); //montaje
 
-    // return() => alert("bye, bye") //desmontaje
+    return console.log("bye, bye") //desmontaje
   }, [count]); //actualizacion
 
   return (
