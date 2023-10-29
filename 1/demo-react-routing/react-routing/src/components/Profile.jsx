@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import Person from "./Person";
 
 const Profile = () => {
@@ -22,21 +23,29 @@ const Profile = () => {
     };
   }, []);
 
+
+const {id} = useParams()
+// console.log(id);
+
+const userFiltro = users.find((user) => user.id == id);
+
+
   return (
     <div>
       <h1>Profile</h1>
       <p>mucha dataaa</p>
 
-      {users?.map((user) => {
-        return (
+      {/* {users?.map((user) => { */}
+        {/* return ( */}
           <Person
-            key={user.id}
-            id={user.id}
-            name={user.name}
-            city={user.address.city}
+            // key={userFiltro.id}
+            id={userFiltro?.id}
+            name={userFiltro?.name}
+            city={userFiltro?.address.city}
           />
-        );
-      })}
+        {/* ) */}
+      {/* })} */}
+      
     </div>
   );
 };

@@ -3,6 +3,8 @@ const Person = ( user ) => {
     <div>
       <h3>Name: {user.name}</h3>
       <h3>Id: {user.id}</h3>
+      <h3>City: {user.city}</h3>
+
 
 
     </div>
